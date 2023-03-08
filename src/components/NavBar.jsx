@@ -1,12 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
-function NavBar() {
+function NavBar(props) {
   return (
     <nav>
-        <NavLink to="/">
-           
-        </NavLink>
+        <Link to={props.linkTo}>
+          <button>
+            {props.children}
+          </button>
+        </Link>
+      
     </nav>
   )
 }

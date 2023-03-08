@@ -19,9 +19,11 @@ function BeerIndividual() {
 
   return (
     <div>
-    <h1> 
-    {beersAxios.name}
-    </h1>
+      <h1>{beersAxios.name}</h1>
+      <h3>{beersAxios.description}</h3>
+      <h4><em>{beersAxios.tagline}</em></h4>
+      <h5>First brewed in {beersAxios.first_brewed}</h5>
+      <h5>{beersAxios.attenuation_level}/100</h5>
     </div>
   )
 }

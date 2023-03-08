@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.beer-card {
+  border: 2px solid black;
+  margin: 15px 200px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+
+}
+
+.link h1 {
+  font-size: 2rem;
+}
+
+.link:hover{
+  color: rgb(81, 35, 196);
+}

@@ -19,9 +19,14 @@ function BeerList() {
     <div>
         {beersAxios.map((beers) => {
             return(
-                <div>
-                <h1>{beers.name}</h1>
-                <Link to={`/${beers._id}`}>{beers.name}</Link>
+                <div className='beer-card'>
+                    <Link className="link" to={`/${beers._id}`}>
+                    {/* <img src={beers.image}/> */}
+                    <h1>{beers.name}</h1>
+                    <h4>{beers.tagline}</h4>
+                    <p>{beers.contributed_by}</p>
+                    </Link>
+
                 </div>
             )
         })}
