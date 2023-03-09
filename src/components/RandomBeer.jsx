@@ -17,6 +17,7 @@ function RandomBeer() {
         <div>
         <h1>This is my random beer</h1>
         <hr/>
+          <img src={beersAxios.image_url} style={{width: "15%"}}/>
           <h1>{beersAxios.name}</h1>
           <h3>{beersAxios.description}</h3>
           <h4><em>{beersAxios.tagline}</em></h4>

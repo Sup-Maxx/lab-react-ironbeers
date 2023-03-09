@@ -11,17 +11,17 @@ function BeerList() {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
       .then(response => {
         setBeersAxios(response.data)
-        console.log(response.data)
-      })
+/*         console.log(response.data)
+ */      })
   }, [])
   
   return (
     <div>
         {beersAxios.map((beers) => {
             return(
-                <div className='beer-card'>
+                <div className='beer-card' key={beers._id}>
                     <Link className="link" to={`/${beers._id}`}>
-                    {/* <img src={beers.image}/> */}
+                    <img src={beers.image_url} style={{width: "65px"}}/>
                     <h1>{beers.name}</h1>
                     <h4>{beers.tagline}</h4>
                     <p>{beers.contributed_by}</p>
