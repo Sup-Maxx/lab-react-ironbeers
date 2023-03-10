@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Link } from 'react-router-dom'
+import {Card, Col, Button} from "antd"
 
 
 function BeerList() {
@@ -17,17 +18,22 @@ function BeerList() {
   
   return (
     <div>
-        {beersAxios.map((beers) => {
-            return(
-                <div className='beer-card' key={beers._id}>
-                    <Link className="link" to={`/${beers._id}`}>
-                    <img src={beers.image_url} style={{width: "65px"}}/>
-                    <h1>{beers.name}</h1>
-                    <h4>{beers.tagline}</h4>
-                    <p>{beers.contributed_by}</p>
-                    </Link>
 
-                </div>
+        {beersAxios.map((beers) => {
+          
+            return(
+              <Col className='column'>
+                <Card title={beers.name} style={{width: 230, margin: "10px 25px", }}>
+                <img src={beers.image_url} style={{width: "65px"}}/>
+                <p><em>{beers.tagline}</em></p>
+
+                <Button type="primary"> 
+                  <Link to={`/${beers._id}`}>Know more</Link>
+                </Button>
+
+                </Card>
+              </Col>
+                
             )
         })}
     </div>

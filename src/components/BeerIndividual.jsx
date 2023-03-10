@@ -18,13 +18,13 @@ function BeerIndividual() {
   }, [])
 
   return (
-    <div>
-      <img src={beersAxios.image_url} style={{width: "15%"}}/>
-      <h1>{beersAxios.name}</h1>
-      <h3>{beersAxios.description}</h3>
-      <h4><em>{beersAxios.tagline}</em></h4>
-      <h5>First brewed in {beersAxios.first_brewed}</h5>
+    <div className='ind-beer'>
+      <img src={beersAxios.image_url} style={{width: "65px"}}/>
       <h5>{beersAxios.attenuation_level}/100</h5>
+      <h1>{beersAxios.name}</h1>
+      <h5>First brewed in {beersAxios.first_brewed}</h5>
+      <p><em>{beersAxios.tagline}</em></p>
+      <h5 style={{width: "60ch"}}>{beersAxios.description}</h5>
     </div>
   )
 }

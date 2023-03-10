@@ -31,7 +31,7 @@ function NewBeer() {
   }
 
   return (
-    <div>
+    <div className='form'>
       <form action="" onSubmit={handleSubmit}>
         <label>
           Name: 

@@ -12,26 +12,40 @@ code {
     monospace;
 }
 
+.navbar {
+  background-color: rgb(29, 140, 209);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
-.beer-card {
-  border: 2px solid black;
-  margin: 15px 200px;
+}
 
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
 }
 
-.link {
-  text-decoration: none;
-  color: black;
-
+form button {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.link h1 {
-  font-size: 2rem;
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
 }
 
-.link:hover{
-  color: rgb(81, 35, 196);
+input {
+  width: 200px;
 }

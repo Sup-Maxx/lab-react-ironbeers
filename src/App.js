@@ -14,6 +14,9 @@ import homeIcon from "../src/assets/home.png"
 import beers from "../src/assets/beers.png"
 import newBeer from "../src/assets/new-beer.png"
 import randomBeer from "../src/assets/random-beer.png"
+import { LinearProgress } from '@mui/material';
+import { Button } from 'antd';
+import BeerButton from './components/BeerButton';
 
 
 
@@ -26,19 +29,7 @@ function App() {
   return (
     <div className="App">
 
-      {pathname === "/" ? <>
-      <NavBar linkTo="/beers" picture={beers} width={"65px"}>Beers</NavBar>
-      <NavBar linkTo="/random-beer" picture={randomBeer} >Random Beer</NavBar>
-      <NavBar linkTo="/new-beer" picture={newBeer} >New Beer</NavBar>
-      </> : <NavBar linkTo="/" picture={homeIcon} width={"60px"}></NavBar>
-       }
-
-{/*       <NavBar linkTo="/" picture={homeIcon} width={"60px"}></NavBar>
- */}      {/* <NavBar linkTo="/beers" picture={beers} width={"65px"}>Beers</NavBar>
-      <NavBar linkTo="/random-beer" picture={randomBeer} >Random Beer</NavBar>
-      <NavBar linkTo="/new-beer" picture={newBeer} >New Beer</NavBar> */}
-      
-
+    <NavBar linkTo="/" picture={homeIcon} width={"60px"}></NavBar>
 
       <Routes>
         <Route path="/beers" element={<BeerList/>} />
